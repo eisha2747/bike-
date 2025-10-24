@@ -1,0 +1,224 @@
+/* ========== BASIC RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ========== LIGHT MODE ========== */
+body {
+  background: #f7fafc;
+  color: #111;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: linear-gradient(90deg, #eeeff0, #050505);
+  color: rgb(8, 8, 8);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header .actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#search {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* ========== BANNER ========== */
+.banner {
+  background: url('banner.jpeg') center/cover no-repeat;
+  color: white;
+  text-align: right;
+  padding: 160px 20px;
+}
+
+.banner h1 {
+  font-size: 60px;
+}
+
+.banner p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.banner .btn {
+  margin-top: 20px;
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cat-btn {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #080101ff;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cat-btn.active {
+  background: #84878aff;
+  color: white;
+}
+
+/* ========== PRODUCT GRID ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.btn {
+  background: #84878aff;;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: #ccc;
+  color: #111;
+}
+
+/* ========== CART DRAWER ========== */
+.drawer {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #84878aff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+/* ========== DARK MODE ========== */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: linear-gradient(90deg, #ece7e7, #333);
+}
+
+body.dark .sidebar,
+body.dark .card,
+body.dark .drawer {
+  background: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+body.dark .cat-btn {
+  border-color: #333;
+  color: #eee;
+}
+
+body.dark footer {
+  background: #111;
+}
+
+body.dark .banner {
+  filter: brightness(0.7);
+}
+/* Order Form Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+}
+
+.modal-content input, .modal-content select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

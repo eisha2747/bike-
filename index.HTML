@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bike Bazaar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Bike Bazaar</div>
+    <div class="actions">
+      <input type="text" id="search" placeholder="Search bikes..." />
+      <button id="darkModeBtn">🌙</button>
+      <button id="openCart">🛒 Cart (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>Bike Bazaar</h1>
+    <p>Find Your Perfect Ride</p>
+  </section>
+
+  <main>
+    <aside class="sidebar">
+      <h2>Categories</h2>
+      <button data-cat="all" class="cat-btn active">All</button>
+      <button data-cat="crusier" class="cat-btn">crusier</button>
+      <button data-cat="street fighter" class="cat-btn">street fighter</button>
+      <button data-cat="sports bike" class="cat-btn">Sports bike</button>
+    </aside>
+
+    <section>
+      <h2>Available Bikes</h2>
+      <div id="products" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <aside id="drawer" class="drawer">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <p><strong>Total:</strong> <span id="cartTotal">₹0</span></p>
+    <button id="clearCart" class="btn secondary">Clear Cart</button>
+    <button id="checkout" class="btn">Checkout</button>
+  </aside>
+  <!-- Order Form Modal -->
+  <div id="orderForm" class="modal">
+    <div class="modal-content">
+      <h3>Order Form</h3>
+      <label>Name:</label>
+      <input type="text" id="custName" placeholder="Your Name">
+      <label>Address:</label>
+      <input type="text" id="custAddress" placeholder="Your Address">
+      <label>Mobile:</label>
+      <input type="text" id="custMobile" placeholder="Your Mobile Number">
+      <label>Payment Method:</label>
+      <select id="custPayment">
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="UPI">UPI</option>
+        <option value="Net Banking">Net Banking</option>
+      </select>
+      <button id="placeOrder" class="btn">Place Order</button>
+      <button id="closeForm" class="btn secondary">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Contact:</strong> +91 8968176576, +91 6283452102 </p>
+    <p><strong>Address:</strong> Near Bus Stand, Malout,Shri Muktsar Sahib, Punjab</p>
+    <p>© 2025 Bike Bazaar. All rights reserved.</p>
+  </footer>
+
+  <script src="js.js"></script>
+</body>
+</html>
+
